@@ -71,21 +71,27 @@ export default function Education() {
             >
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 {/* Main Card */}
-                <motion.div
-                  whileHover={{ scale: 1.02, x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="
-  flex-1 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm
-  rounded-2xl p-6 shadow-lg border border-white/60 dark:border-gray-700
-"
+<motion.div
+  whileHover={{ scale: 1.02, x: 10 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="
+    flex-1 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm
+    rounded-2xl p-6 shadow-lg border border-white/60 dark:border-gray-700
+  "
+>
+  <h3 className="text-xl text-gray-800 dark:text-gray-200 mb-2">
+    {edu.institution}
+  </h3>
 
-                >
-                  <h3 className="text-xl text-gray-200 mb-2">
-                    {edu.institution}
-                  </h3>
-                  <p className="text-purple-400 mb-1">{edu.grade}</p>
-                  <p className="text-sm text-gray-500">{edu.period}</p>
-                </motion.div>
+  <p className="text-purple-600 dark:text-purple-400 mb-1">
+    {edu.grade}
+  </p>
+
+  <p className="text-sm text-gray-600 dark:text-gray-400">
+    {edu.period}
+  </p>
+</motion.div>
+
 
                 {/* Desktop Hover Panel */}
                 <AnimatePresence>
