@@ -14,7 +14,7 @@ const educationData: EducationItem[] = [
     institution: "Shah & Anchor Kutchhi Engineering College",
     period: "Nov 2022 - Present",
     details: [
-      "CGPA: 9.05 (current)",
+      "CGPA: 9.17 (current)",
       "Major Project: Firefighter IoT Wearable",
       "UI/UX Lead for academic projects",
     ],
