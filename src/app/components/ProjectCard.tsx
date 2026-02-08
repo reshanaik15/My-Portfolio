@@ -33,22 +33,40 @@ export default function ProjectCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      onClick={handleClick}
-      className="
-        bg-white/70 dark:bg-gray-900/70
-        backdrop-blur-sm rounded-2xl p-6
-        shadow-md dark:shadow-black/40
-        hover:shadow-2xl dark:hover:shadow-purple-900/40
-        transition-all duration-300 cursor-pointer
-        border border-white/60 dark:border-white/10
-        group
-      "
-    >
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+
+  transition={{
+    duration: 0.5,
+    delay: index * 0.1,
+    ease: "easeOut",
+  }}
+
+  whileHover={{
+    y: -6,
+    scale: 1.015,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 18,
+    },
+  }}
+
+  className="
+    bg-white/70 dark:bg-gray-900/70
+    backdrop-blur-sm rounded-2xl p-6
+
+    shadow-md dark:shadow-black/40
+    hover:shadow-xl dark:hover:shadow-purple-900/30
+
+    transition-shadow duration-300 ease-out
+
+    border border-white/60 dark:border-white/10
+    group
+  "
+>
+
       {/* Title */}
       <h3
         className="
@@ -85,6 +103,7 @@ export default function ProjectCard({
 
       {/* CTA */}
       <div
+      onClick={handleClick}
         className="
           flex items-center gap-2
           text-purple-600 dark:text-purple-400
