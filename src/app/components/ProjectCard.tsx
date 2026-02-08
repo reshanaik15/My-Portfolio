@@ -102,17 +102,21 @@ export default function ProjectCard({
       </div>
 
       {/* CTA */}
-      <div
-      onClick={handleClick}
-        className="
-          flex items-center gap-2
-          text-purple-600 dark:text-purple-400
-          group-hover:gap-3 transition-all duration-300
-        "
-      >
-        <span className="text-sm">{ctaLabel}</span>
-        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-      </div>
+      <button
+  onClick={handleClick}
+  className="
+    flex items-center gap-2
+    text-purple-600 dark:text-purple-400
+    hover:gap-3
+    transition-all duration-300
+    cursor-pointer
+    w-fit
+  "
+>
+  <span className="text-sm">{ctaLabel}</span>
+  <ArrowRight className="w-4 h-4 hover:translate-x-1 transition-transform duration-300" />
+</button>
+
     </motion.div>
   );
 }
