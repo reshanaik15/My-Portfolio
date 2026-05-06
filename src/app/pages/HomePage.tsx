@@ -1,24 +1,18 @@
 import Navigation from '../components/Navigation';
-import Hero from '../components/Hero';
-import Education from '../components/Education';
-import Skills from '../components/Skills';
+import SplitIllustration from '../components/SplitIllustration';
 import About from '../components/About';
-import Projects from '../components/Projects';
+import Education from '../components/Education';
 import Footer from '../components/Footer';
 
 export default function HomePage() {
   return (
     <>
       <Navigation />
-      
       <main className="relative z-10">
-        <Hero />
-        <Education />
-        <Skills />
+        <SplitIllustration />
         <About />
-        <Projects />
+        <Education />
       </main>
-
       <Footer />
     </>
   );

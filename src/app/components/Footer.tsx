@@ -58,7 +58,7 @@ export default function Footer() {
           </motion.a>
 
           <motion.a
-            href="https://www.linkedin.com/in/resha-naik-b448ab25a/"
+            href="https://www.linkedin.com/in/resha-naik/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, y: -5 }}
@@ -111,7 +111,7 @@ export default function Footer() {
 >
 
             <p className="text-gray-600 dark:text-gray-300">
-              Portfolio created with passion by <span className="text-purple-600 dark:text-purple-400">Resha Naik</span> — 2025
+              Portfolio created with passion by <span className="text-purple-600 dark:text-purple-400">Resha Naik</span> — 2026
             </p>
           </div>
         </motion.div>

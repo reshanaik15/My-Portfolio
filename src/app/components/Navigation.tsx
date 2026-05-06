@@ -37,7 +37,7 @@ export default function Navigation() {
         }`}
     >
       <ul className="flex items-center gap-8">
-        {['Work', 'Skills', 'About', 'Contact'].map((item) => (
+        {['Home', 'About', 'Education', 'Contact'].map((item) => (
           <li key={item}>
             <button
               onClick={() => scrollToSection(item.toLowerCase())}
