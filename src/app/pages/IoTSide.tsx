@@ -246,6 +246,7 @@ export default function IoTSide() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
+                { title: 'Creathon SAKEC', result: '1st Place 🏆', year: 'Y4', note: 'Hardware & product design competition' },
                 { title: 'TECH-EXPO 3.0', result: '1st Place 🏆', year: 'Y4', note: 'Hardware competition' },
                 { title: 'FCRIT Avishkar 2026', result: '2nd Place 🥈', year: 'Y4', note: 'Inter-college research competition' },
                 { title: 'Avishkar 2025', result: 'Zonal + Final Round', year: 'Y4', note: 'Made it to state-level finals' },
