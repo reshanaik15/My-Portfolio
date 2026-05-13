@@ -91,8 +91,7 @@ export default function IoTSide() {
                   </span>
                 ))}
               </div>
-
-              <motion.button
+<div className="flex gap-4"><motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.getElementById('iot-projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -101,6 +100,20 @@ export default function IoTSide() {
               >
                 See my builds
               </motion.button>
+                 <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+  onClick={() => window.open('/Resha-Naik-IoT-Resume.pdf', '_blank')}
+  className="px-8 py-4 rounded-full text-sm font-medium border"
+  style={{
+    color: '#185FA5',
+    borderColor: '#B5D4F4',
+    background: 'white'
+  }}
+>
+  Download Resume
+</motion.button></div>
+              
             </motion.div>
           </div>
         </section>

@@ -115,7 +115,7 @@ export default function UXSide() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('/Resha Naik_Resume.pdf', '_blank')}
+                  onClick={() => window.open('/Resha-Naik-UIUX-Resume.pdf', '_blank')}
                   className="px-8 py-4 rounded-full text-sm font-medium border"
                   style={{
                     color: '#993556',
