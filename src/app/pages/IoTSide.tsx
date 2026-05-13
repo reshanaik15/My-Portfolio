@@ -193,7 +193,7 @@ export default function IoTSide() {
   {
     title: 'Assistive Suction Glove',
     subtitle: 'Assistive Hardware',
-    desc: 'Built a 12V pneumatic assistive glove for a physiotherapy tremor-patient research project – engineered a MOSFET-based pump control circuit (12V Li-ion, push-button actuation) and handled all mechanical assembly: tubing, 3 suction cups, and glove integration. Designed to enable object pickup without grip force',
+    desc: 'Built a 12V pneumatic assistive glove for a physiotherapy tremor-patient research project – engineered a MOSFET-based pump control circuit (12V Li-ion, push-button actuation) and handled all mechanical assembly: tubing, 3 suction cups, and glove integration. Designed to enable object pickup without grip force.',
     tags: ['Assistive Tech', 'PCB Design', 'Wearables', 'Hardware Prototyping', 'Mechanical Assembly'],
     status: 'Ongoing',
     accent: '#378ADD',
