@@ -8,7 +8,8 @@ interface ProjectCardProps {
   tags: string[];
   slug?: string;
   href?: string;
-  ctaLabel: string;
+  ctaLabel?: string;
+  links?: { label: string; href: string }[];
   index: number;
 }
 
@@ -19,6 +20,7 @@ export default function ProjectCard({
   slug,
   href,
   ctaLabel,
+  links,
   index,
 }: ProjectCardProps) {
   const navigate = useNavigate();
@@ -33,40 +35,33 @@ export default function ProjectCard({
 
   return (
     <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-
-  transition={{
-    duration: 0.5,
-    delay: index * 0.1,
-    ease: "easeOut",
-  }}
-
-  whileHover={{
-    y: -6,
-    scale: 1.015,
-    transition: {
-      type: "spring",
-      stiffness: 260,
-      damping: 18,
-    },
-  }}
-
-  className="
-    bg-white/70 dark:bg-gray-900/70
-    backdrop-blur-sm rounded-2xl p-6
-
-    shadow-md dark:shadow-black/40
-    hover:shadow-xl dark:hover:shadow-purple-900/30
-
-    transition-shadow duration-300 ease-out
-
-    border border-white/60 dark:border-white/10
-    group
-  "
->
-
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: "easeOut",
+      }}
+      whileHover={{
+        y: -6,
+        scale: 1.015,
+        transition: {
+          type: "spring",
+          stiffness: 260,
+          damping: 18,
+        },
+      }}
+      className="
+        bg-white/70 dark:bg-gray-900/70
+        backdrop-blur-sm rounded-2xl p-6
+        shadow-md dark:shadow-black/40
+        hover:shadow-xl dark:hover:shadow-purple-900/30
+        transition-shadow duration-300 ease-out
+        border border-white/60 dark:border-white/10
+        group
+      "
+    >
       {/* Title */}
       <h3
         className="
@@ -102,21 +97,42 @@ export default function ProjectCard({
       </div>
 
       {/* CTA */}
-      <button
-  onClick={handleClick}
-  className="
-    flex items-center gap-2
-    text-purple-600 dark:text-purple-400
-    hover:gap-3
-    transition-all duration-300
-    cursor-pointer
-    w-fit
-  "
->
-  <span className="text-sm">{ctaLabel}</span>
-  <ArrowRight className="w-4 h-4 hover:translate-x-1 transition-transform duration-300" />
-</button>
-
+      <div className="flex flex-wrap gap-4">
+        {links && links.length > 0 ? (
+          links.map((link) => (
+            
+              <a key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex items-center gap-2
+                text-purple-600 dark:text-purple-400
+                hover:gap-3
+                transition-all duration-300
+                text-sm w-fit
+              "
+            >
+              <span>{link.label}</span>
+              <ArrowRight className="w-4 h-4 hover:translate-x-1 transition-transform duration-300" />
+            </a>
+          ))
+        ) : (
+          <button
+            onClick={handleClick}
+            className="
+              flex items-center gap-2
+              text-purple-600 dark:text-purple-400
+              hover:gap-3
+              transition-all duration-300
+              cursor-pointer w-fit
+            "
+          >
+            <span className="text-sm">{ctaLabel}</span>
+            <ArrowRight className="w-4 h-4 hover:translate-x-1 transition-transform duration-300" />
+          </button>
+        )}
+      </div>
     </motion.div>
   );
 }

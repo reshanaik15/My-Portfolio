@@ -18,13 +18,15 @@ const projectsData = [
     slug: "animal-rescue",
     ctaLabel: "View Case Study",
   },
-  {
+{
     title: "Blood Bond",
     summary:
-      "Web platform for human and pet blood donation built using HTML, CSS, and JavaScript.",
-    tags: ["Frontend", "Web", "JavaScript"],
-    href: "https://reshanaik15.github.io/BloodBond/index.html",
-    ctaLabel: "View Live Project",
+      "Web platform connecting blood donors and recipients — human and pet. Includes a normalized MySQL database with 6 tables covering donor-recipient matching, 56-day eligibility tracking, and real-time blood inventory management.",
+    tags: ["Frontend", "Web", "JavaScript", "MySQL"],
+    links: [
+      { label: "View Live Site", href: "https://reshanaik15.github.io/BloodBond/index.html" },
+      { label: "View Database", href: "https://github.com/reshanaik15/BloodBond/tree/main/database" },
+    ],
   },
   {
     title: "Animated Web Design Prototype",
