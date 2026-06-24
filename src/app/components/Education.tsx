@@ -12,9 +12,9 @@ const educationData: EducationItem[] = [
   {
     grade: "B.Tech (Electronics & Computer Science)",
     institution: "Shah & Anchor Kutchhi Engineering College",
-    period: "Nov 2022 - Present",
+    period: "Nov 2022 - May 2026",
     details: [
-      "CGPA: 9.17 (current)",
+      "CGPA: 9.25",
       "Major Project: Firefighter IoT Wearable",
       "UI/UX Lead for academic projects",
     ],
